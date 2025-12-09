@@ -1,3 +1,4 @@
+{{- if .Values.indexFile }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -7,3 +8,4 @@ metadata:
 data:
   index.html: |
 {{ .Files.Get .Values.indexFile | indent 4 }}
+{{- end }}
