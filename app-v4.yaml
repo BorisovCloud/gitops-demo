@@ -11,6 +11,9 @@ image:
   args:
     - "-text=Hello from v4"
 
+sidecar:
+  enabled: false
+
 # This is to override the chart name.
 nameOverride: ""
 fullnameOverride: ""

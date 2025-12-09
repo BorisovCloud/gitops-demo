@@ -11,6 +11,15 @@ image:
   args:
     - "-text=Hello from v5"
 
+sidecar:
+  enabled: true
+  name: sidecar-container
+  image:
+    repository: busybox
+    tag: "latest"
+    pullPolicy: IfNotPresent
+  command: ["sh", "-c", "while true; do date; sleep 10; done"]
+
 indexFile: nginx_index.html
 
 secret:
